@@ -1,0 +1,10 @@
+[package]
+name = "steam-hour-farmer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.12.4", features = ["json"] }
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
+steamworks = "0.11.0"
+serde_json = "1.0.116"

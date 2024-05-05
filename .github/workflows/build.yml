@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Compile
@@ -15,8 +15,8 @@ jobs:
         uses: rust-build/rust-build.action@v1.4.5
         with:
           RUSTTARGET: x86_64-pc-windows-gnu
+          ARCHIVE_TYPES: zip
           UPLOAD_MODE: none
-          STATIC_LINKING: false
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:

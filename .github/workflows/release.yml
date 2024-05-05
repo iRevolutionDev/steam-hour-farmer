@@ -1,4 +1,3 @@
----
 on:
   push:
     tags:
@@ -7,7 +6,7 @@ on:
 name: Create Release
 
 env:
-  RELEASE_BIN: {{crate_name}}
+  RELEASE_BIN: steam-hour-farmer
   RELEASE_ADDS: >-
     README.md
 

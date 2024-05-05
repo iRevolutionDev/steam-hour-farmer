@@ -7,16 +7,14 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - name: Install dependencies
-        run: sudo apt-get install gcc-multilib
       - uses: actions/checkout@master
       - name: Compile
         id: compile
         uses: rust-build/rust-build.action@v1.4.5
         with:
-          RUSTTARGET: x86_64-unknown-linux-musl
+          RUSTTARGET: x86_64-pc-windows-gnu
           UPLOAD_MODE: none
           STATIC_LINKING: false
       - name: Upload artifact
